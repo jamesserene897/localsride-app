@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LocalsRide | Private Transfers</title>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center p-5 bg-white shadow-sm">
+        <div class="text-2xl font-bold text-blue-700">LocalsRide</div>
+        <div class="space-x-4">
+            <a href="/driver" class="text-gray-600 hover:text-blue-700">Driver Login</a>
+            <button class="bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-800">Book now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-4xl mx-auto text-center py-20 px-5">
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Best prices for transfers and rides in all countries</h1>
+        <p class="text-gray-500 mb-10 text-lg">Compare offers from verified local drivers. No hidden fees. Free cancellation.</p>
+
+        <!-- Search Card -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+            <form action="/request" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="text-left">
+                    <label class="text-xs text-gray-400 uppercase font-bold">Pickup</label>
+                    <input type="text" name="pickup" placeholder="Airport, hotel, address..." class="w-full p-3 border-b-2 border-gray-200 focus:border-blue-600 outline-none text-lg" required>
+                </div>
+                <div class="text-left">
+                    <label class="text-xs text-gray-400 uppercase font-bold">Destination</label>
+                    <input type="text" name="destination" placeholder="Airport, hotel, address..." class="w-full p-3 border-b-2 border-gray-200 focus:border-blue-600 outline-none text-lg" required>
+                </div>
+                <div class="text-left">
+                    <label class="text-xs text-gray-400 uppercase font-bold">Date</label>
+                    <input type="date" name="date" class="w-full p-3 border-b-2 border-gray-200 outline-none" required>
+                </div>
+                <div class="text-left">
+                    <label class="text-xs text-gray-400 uppercase font-bold">Passengers</label>
+                    <input type="number" name="passengers" placeholder="1" class="w-full p-3 border-b-2 border-gray-200 outline-none" required>
+                </div>
+                <button type="submit" class="md:col-span-2 bg-blue-700 text-white py-4 rounded-xl text-xl font-bold hover:bg-blue-800 transition shadow-lg">Find a Driver</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
